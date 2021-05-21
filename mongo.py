@@ -3,6 +3,7 @@ import pymongo
 if os.path.exists("env.py"):
     import env
 
+
 MONGO_URI = os.environ.get("MONGO_URI")
 DATABASE = "myFirstDB"
 COLLECTION = "famous_people"
@@ -23,9 +24,9 @@ coll = conn[DATABASE][COLLECTION]
 
 documents = coll.find()
 
-new_doc = {"first": "douglas", "last": "adams", "dob": "11/03/1952", "hair_colour": "grey", "occupation": "writer", "nationality": "british"}
+# new_doc = {"first": "douglas", "last": "adams", "dob": "11/03/1952", "hair_colour": "grey", "occupation": "writer", "nationality": "british"}
 
-coll.insert(new_doc)
+# coll.insert(new_doc)
 
 for doc in documents:
     print(doc)
